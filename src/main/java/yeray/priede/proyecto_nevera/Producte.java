@@ -3,7 +3,7 @@ package yeray.priede.proyecto_nevera;
 public class Producte {
     String nom;
     String descripcio;
-    int preu;
+    double preu;
 
     public Producte(String nom, String descripcio, int preu) {
         this.nom = nom;
@@ -31,7 +31,7 @@ public class Producte {
         return descripcio;
     }
 
-    public int getPreu() {
+    public double getPreu() {
         return preu;
     }
 
@@ -39,7 +39,7 @@ public class Producte {
     }
 
 
-    public String afegirProducte(String nom,String descripcio, int preu,){
+    public String afegirProducte(String nom,String descripcio, double preu,){
 
 
     }
