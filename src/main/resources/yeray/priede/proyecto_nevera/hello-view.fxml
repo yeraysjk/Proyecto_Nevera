@@ -1,17 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.gluonhq.charm.glisten.control.AppBar?>
-<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/19" fx:controller="yeray.priede.proyecto_nevera.HelloController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-    </padding>
-
-    <Label fx:id="welcomeText" />
-    <Button onAction="#onHelloButtonClick" text="Hello!" />
-   <AppBar titleText="AppBar" />
-</VBox>
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="yeray.priede.proyecto_nevera.HelloController">
+  <tabs>
+    <Tab text="Entrada de producte">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="LbNomEntrada" layoutX="325.0" layoutY="32.0" prefHeight="18.0" prefWidth="134.0" text="Nom" />
+                  <TextField fx:id="TfPreuEntrada" layoutX="326.0" layoutY="94.0" />
+                  <Label fx:id="LbPreuEntrada" layoutX="326.0" layoutY="76.0" prefHeight="18.0" prefWidth="134.0" text="Preu €" />
+                  <Label fx:id="LbDescripcioEntrada" layoutX="325.0" layoutY="120.0" prefHeight="18.0" prefWidth="134.0" text="Descripció" />
+                  <Label fx:id="LbDataEntrada" layoutX="325.0" layoutY="235.0" prefHeight="15.0" prefWidth="134.0" text="Data caducitat" />
+                  <TextField fx:id="TfNomEntrada" layoutX="326.0" layoutY="50.0" />
+                  <DatePicker fx:id="DpDataEntrada" layoutX="326.0" layoutY="254.0" />
+                  <TextArea fx:id="TaDescripcioEntrada" layoutX="325.0" layoutY="138.0" prefHeight="66.0" prefWidth="200.0" />
+                  <TextField fx:id="TfNomRespostaEntrada" layoutX="38.0" layoutY="72.0" />
+                  <TextField fx:id="TfPreuRespostaEntrada" layoutX="38.0" layoutY="125.0" />
+                  <TextArea fx:id="TaDescripcioRespostaEntrada" layoutX="38.0" layoutY="171.0" prefHeight="66.0" prefWidth="200.0" />
+                  <TextField fx:id="TfDataRespostaEntrada" layoutX="38.0" layoutY="241.0" />
+                  <Button fx:id="BtGuardaEntrada" layoutX="112.0" layoutY="280.0" mnemonicParsing="false" text="Guarda" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="Sortida de producte">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="LbNomSortida" layoutX="291.0" layoutY="21.0" prefHeight="18.0" prefWidth="134.0" text="Nom" />
+                  <TextField fx:id="TfPreuSortida" layoutX="290.0" layoutY="88.0" />
+                  <Label fx:id="LbPreuSortida" layoutX="291.0" layoutY="70.0" prefHeight="18.0" prefWidth="134.0" text="Preu €" />
+                  <Label fx:id="LbDescripcioSortida" layoutX="291.0" layoutY="129.0" prefHeight="18.0" prefWidth="134.0" text="Descripció" />
+                  <Label fx:id="LaDataSortida" layoutX="291.0" layoutY="226.0" prefHeight="15.0" prefWidth="134.0" text="Data caducitat" />
+                  <TextField fx:id="TfNomSortida" layoutX="291.0" layoutY="41.0" />
+                  <DatePicker fx:id="DpDataSortida" layoutX="291.0" layoutY="244.0" />
+                  <TextArea fx:id="TaDescripcioSortida" layoutX="290.0" layoutY="147.0" prefHeight="66.0" prefWidth="200.0" />
+                  <Button fx:id="BtPrimer" layoutX="9.0" layoutY="238.0" minHeight="13.0" minWidth="34.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="54.0" text="&lt;&lt;" />
+                  <Button fx:id="BtCercaSortida" layoutX="339.0" layoutY="282.0" mnemonicParsing="false" text="Cerca" />
+                  <TextField fx:id="TfNomRespostaSortida" layoutX="36.0" layoutY="41.0" />
+                  <TextField fx:id="TfPreuRespostaSortida" layoutX="36.0" layoutY="75.0" />
+                  <TextField fx:id="TfDataRespostaSortida" layoutX="44.0" layoutY="200.0" />
+                  <TextArea fx:id="TaDescripcioRespostaSortida" layoutX="36.0" layoutY="129.0" prefHeight="66.0" prefWidth="200.0" />
+                  <Button fx:id="BtUltim" layoutX="195.0" layoutY="238.0" minHeight="13.0" minWidth="34.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="54.0" text="&gt;&gt;" />
+                  <Button fx:id="BtAnterior" layoutX="71.0" layoutY="238.0" minHeight="13.0" minWidth="34.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="54.0" text="&lt;" />
+                  <Button fx:id="BtSeguent" layoutX="132.0" layoutY="238.0" minHeight="13.0" minWidth="34.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="54.0" text="&gt;" />
+                  <Button fx:id="BtTreuSortida" layoutX="98.0" layoutY="282.0" mnemonicParsing="false" text="Treu" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+  </tabs>
+</TabPane>

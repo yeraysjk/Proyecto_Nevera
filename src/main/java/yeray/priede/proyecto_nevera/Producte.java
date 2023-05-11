@@ -1,16 +1,27 @@
 package yeray.priede.proyecto_nevera;
 
+import java.io.IOException;
+import java.io.OutputStream;
+import java.util.Date;
+
 public class Producte {
     String nom;
     String descripcio;
     double preu;
+    Date data;
 
-    public Producte(String nom, String descripcio, double preu) {
+    //<editor-fold desc="Constructor">
+    public Producte(String nom, String descripcio, double preu, Date data) {
         this.nom = nom;
         this.descripcio = descripcio;
         this.preu = preu;
+        this.data = data;
     }
+    public Producte() {
+    }
+    //</editor-fold>
 
+    //constructors getter i setter
     public String getNom() {
         return nom;
     }
@@ -35,15 +46,31 @@ public class Producte {
         return preu;
     }
 
-    public Producte() {
+    public void setData() {
+        this.data = data;
+    }
+
+    public Date getData() {
+        return data;
     }
 
 
-//    public String afegirProducte(String nom,String descripcio, double preu){
-//
-//
-//            Producte producte = new Producte(nom,descripcio,preu);
-//
-//        }
+
+    //retorna un string separat per ;
+    public String toString() {
+
+        return nom + ";" + descripcio + ";" + preu + ";" + data;
+    }
+
+    public String afegirProducte(String nom, String descripcio, double preu, Date data) {
+        Producte producte = new Producte();
 
     }
+    public void guardarProducteEnFitxer() throws IOException {
+        file.escriuFitxerText(fitxer, this.toString(), true);
+
+
+    }
+
+
+}
