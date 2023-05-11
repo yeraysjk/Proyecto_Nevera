@@ -10,7 +10,21 @@ version '1.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
+    maven {
+        url myMavenRepoReadUrl // l'url està a l'arxiu ~/.gradle/gradle.properties
+        credentials {
+            username myMavenRepoReadUsername // l'usuari i el pass estan a l'arxiu ~/.gradle/gradle.properties
+            password myMavenRepoReadPassword
+        }
+    }
 }
+
+dependencies {
+    implementation 'yeray.priede
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+}
+
 
 ext {
     junitVersion = '5.8.2'
