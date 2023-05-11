@@ -1,11 +1,12 @@
 package yeray.priede.proyecto_nevera;
+import java.io.OutputStream;
 
 public class Producte {
     String nom;
     String descripcio;
     double preu;
 
-    public Producte(String nom, String descripcio, int preu) {
+    public Producte(String nom, String descripcio, double preu) {
         this.nom = nom;
         this.descripcio = descripcio;
         this.preu = preu;
@@ -39,8 +40,11 @@ public class Producte {
     }
 
 
-    public String afegirProducte(String nom,String descripcio, double preu,){
+    public String afegirProducte(String nom,String descripcio, double preu){
 
+
+            Producte producte = new Producte(nom,descripcio,preu);
+
+        }
 
     }
-}
